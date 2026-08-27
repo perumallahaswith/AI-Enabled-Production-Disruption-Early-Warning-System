@@ -1,0 +1,86 @@
+{
+  "model_version": "v1.0.0",
+  "dataset_info": {
+    "train_samples": 7560,
+    "test_samples": 2520,
+    "features_count": 34,
+    "positive_rate_train": 2.99,
+    "positive_rate_test": 6.94
+  },
+  "random_forest": {
+    "precision": 0.8824,
+    "recall": 0.1714,
+    "f1_score": 0.2871,
+    "roc_auc": 0.9971,
+    "pr_auc": 0.9379,
+    "brier_score": 0.0302,
+    "confusion_matrix": {
+      "true_negatives": 2341,
+      "false_positives": 4,
+      "false_negatives": 145,
+      "true_positives": 30
+    }
+  },
+  "baseline_logistic": {
+    "precision": 0.9231,
+    "recall": 0.4114,
+    "f1_score": 0.5692,
+    "roc_auc": 0.8425,
+    "pr_auc": 0.723,
+    "brier_score": 0.0378,
+    "confusion_matrix": {
+      "true_negatives": 2339,
+      "false_positives": 6,
+      "false_negatives": 103,
+      "true_positives": 72
+    }
+  },
+  "isolation_forest": {
+    "avg_anomaly_score": 22.29,
+    "anomaly_rate_pct": 2.98
+  },
+  "top_features": [
+    {
+      "feature": "Vibration",
+      "importance": 0.242
+    },
+    {
+      "feature": "Machine_Efficiency_Pct",
+      "importance": 0.2231
+    },
+    {
+      "feature": "Vibration_RollMean_6h",
+      "importance": 0.1926
+    },
+    {
+      "feature": "Vib_Process_Drift",
+      "importance": 0.1194
+    },
+    {
+      "feature": "Cycle_Time_Sec",
+      "importance": 0.0436
+    },
+    {
+      "feature": "Cycle_Efficiency_Ratio",
+      "importance": 0.042
+    },
+    {
+      "feature": "Temperature",
+      "importance": 0.0301
+    },
+    {
+      "feature": "Power_Consumption_RollMean_6h",
+      "importance": 0.0223
+    },
+    {
+      "feature": "Temperature_RollMean_6h",
+      "importance": 0.0223
+    },
+    {
+      "feature": "Power_Consumption",
+      "importance": 0.0148
+    }
+  ],
+  "training_timestamp": "2026-08-27T10:40:28.335645",
+  "raw_dataset_source": "data/raw/fab_synthetic_data.xlsx"
+}

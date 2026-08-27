@@ -1,0 +1,208 @@
+/* ==============================================================================
+   SEMICONDUCTOR FAB AI CONTROL TOWER - ENTERPRISE INDUSTRIAL STYLING
+   ============================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-primary: #0A0E17;
+    --bg-secondary: #111827;
+    --bg-card: #161F30;
+    --bg-card-hover: #1E293B;
+    --border-color: #243046;
+    --border-accent: #3B82F6;
+    
+    --text-main: #F3F4F6;
+    --text-muted: #9CA3AF;
+    --text-dim: #6B7280;
+
+    --status-healthy: #10B981;
+    --status-watch: #F59E0B;
+    --status-high-risk: #F97316;
+    --status-critical: #EF4444;
+    --status-cyan: #06B6D4;
+    --status-purple: #8B5CF6;
+}
+
+/* Global Font and Clean Background */
+html, body, [class*="css"] {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--text-main);
+}
+
+/* Streamlit Main View Container Padding */
+.block-container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 2rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    max-width: 100% !important;
+}
+
+/* Top Control Bar Header */
+.fab-top-bar {
+    background: linear-gradient(90deg, #0F172A 0%, #1E293B 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.fab-title-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.fab-icon-badge {
+    background: linear-gradient(135deg, #2563EB, #06B6D4);
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+.fab-title-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #F9FAFB;
+    margin: 0;
+}
+
+.fab-subtitle-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.fab-meta-badges {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.fab-pill {
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid #374151;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: #E5E7EB;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.healthy {
+    background-color: var(--status-healthy);
+    box-shadow: 0 0 8px var(--status-healthy);
+}
+
+.status-dot.critical {
+    background-color: var(--status-critical);
+    box-shadow: 0 0 8px var(--status-critical);
+}
+
+/* Metric KPI Cards */
+.kpi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card:hover {
+    border-color: #38BDF8;
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.kpi-card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+}
+
+.accent-blue { background: #3B82F6; }
+.accent-green { background: #10B981; }
+.accent-amber { background: #F59E0B; }
+.accent-orange { background: #F97316; }
+.accent-red { background: #EF4444; }
+.accent-cyan { background: #06B6D4; }
+
+.kpi-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.kpi-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.03em;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.2;
+}
+
+.kpi-delta {
+    font-size: 0.75rem;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.delta-positive { color: var(--status-healthy); }
+.delta-negative { color: var(--status-critical); }
+.delta-neutral { color: var(--text-dim); }
+
+/* Section Header Cards */
+.section-banner {
+    background: #111827;
+    border-left: 4px solid #3B82F6;
+    border-radius: 4px;
+    padding: 10px 16px;
+    margin: 16px 0 12px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #E2E8F0;
+}
+
+/* Sidebar Customization */
+[data-testid="stSidebar"] {
+    background-color: #0A0E17 !important;
+    border-right: 1px solid #1E293B !important;
+}
+
+[data-testid="stSidebarNav"] {
+    padding-top: 1rem;
+}
